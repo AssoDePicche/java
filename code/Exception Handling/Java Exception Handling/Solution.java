@@ -1,5 +1,4 @@
 import java.lang.Exception;
-
 import java.util.Scanner;
 
 public class Solution {
