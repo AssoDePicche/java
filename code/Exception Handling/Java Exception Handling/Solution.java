@@ -2,10 +2,12 @@ import java.lang.Exception;
 import java.util.Scanner;
 
 public class Solution {
+  public static final MyCalculator calculator = new MyCalculator();
+
+  public static final Scanner scanner = new Scanner(System.in);
+
   public static void main(String[] args) {
     int n, p;
-
-    Scanner scanner = new Scanner(System.in);
 
     while (scanner.hasNextInt()) {
       n = scanner.nextInt();
@@ -13,23 +15,12 @@ public class Solution {
       p = scanner.nextInt();
 
       try {
-        System.out.println(Solution.power(n, p));
+        System.out.println(calculator.power(n, p));
       } catch (Exception exception) {
         System.out.println(exception);
       }
     }
+
     scanner.close();
-  }
-
-  public static long power(int n, int p) throws Exception {
-    if (n < 0 || p < 0) {
-      throw new Exception("n or p should not be negative.");
-    }
-
-    if (n == 0 && p == 0) {
-      throw new Exception("n and p should not be zero.");
-    }
-
-    return (long) Math.pow(n, p);
   }
 }
