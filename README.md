@@ -1,6 +1,6 @@
 # Java
 
-Codes used during my preparation to earn my five-star medal in Java in HackerRank
+HackerRank's Java challenges.
 
 ## Topics
 
