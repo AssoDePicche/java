@@ -20,12 +20,10 @@ public class Solution {
 
     char temp[] = new char[len];
 
-    while (len > 0) {
+    while (len-- > 0) {
       temp[i] = s.charAt(len - 1);
 
       i++;
-
-      len--;
     }
 
     return new String(temp);
