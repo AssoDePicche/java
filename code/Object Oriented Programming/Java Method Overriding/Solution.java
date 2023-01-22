@@ -1,5 +1,3 @@
-import java.lang.reflect.Method;
-
 public class Solution {
   public static void main(String[] args) {
     Sports sports = new Sports();
