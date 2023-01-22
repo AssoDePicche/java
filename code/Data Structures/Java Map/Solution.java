@@ -1,7 +1,5 @@
 import java.util.HashMap;
-
 import java.util.Map;
-
 import java.util.Scanner;
 
 public class Solution {
@@ -18,7 +16,7 @@ public class Solution {
 
     scanner.nextLine();
 
-    while (entries != 0) {
+    while (entries-- != 0) {
       person = scanner.nextLine();
 
       phone = scanner.nextInt();
@@ -26,8 +24,6 @@ public class Solution {
       phonebook.put(person, phone);
 
       scanner.nextLine();
-
-      entries--;
     }
 
     while (scanner.hasNext()) {
