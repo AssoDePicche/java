@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Solution {
   public static void main(String[] args) {
-    int a, b, n, queries, aux = 0;
+    int a, b, n, queries, temp = 0;
 
     String serie;
 
@@ -10,28 +10,26 @@ public class Solution {
 
     queries = scanner.nextInt();
 
-    while (queries != 0) {
+    while (queries-- != 0) {
       a = scanner.nextInt();
 
       b = scanner.nextInt();
 
       n = scanner.nextInt();
 
-      aux += a + Math.pow(2, 0) * b;
+      temp += a + Math.pow(2, 0) * b;
 
-      serie = String.valueOf(aux);
+      serie = String.valueOf(temp);
 
       for (int i = 1; i < n; i++) {
-        aux += Math.pow(2, i) * b;
+        temp += Math.pow(2, i) * b;
         
-        serie += " " + String.valueOf(aux);
+        serie += " " + String.valueOf(temp);
       }
 
       System.out.println(serie);
 
-      aux = 0;
-
-      queries--;
+      temp = 0;
     }
 
     scanner.close();
