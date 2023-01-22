@@ -1,7 +1,5 @@
 import java.util.regex.Pattern;
-
 import java.util.regex.PatternSyntaxException;
-
 import java.util.Scanner;
 
 public class Solution {
