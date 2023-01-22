@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 import java.util.Scanner;
 
 public class Solution {
@@ -14,17 +13,15 @@ public class Solution {
 
     elements = scanner.nextInt();
 
-    while (elements != 0) {
+    while (elements-- != 0) {
       x = scanner.nextInt();
 
       list.add(x);
-
-      elements--;
     }
 
     queries = scanner.nextInt();
 
-    while (queries != 0) {
+    while (queries-- != 0) {
       command = scanner.nextLine();
 
       switch (command.toLowerCase()) {
@@ -34,16 +31,12 @@ public class Solution {
           y = scanner.nextInt();
 
           list.add(x, y);
-
-          queries--;
           break;
 
         case "delete":
           x = scanner.nextInt();
 
           list.remove(x);
-
-          queries--;
           break;
       }
     }
