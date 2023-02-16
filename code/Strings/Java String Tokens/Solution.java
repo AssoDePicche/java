@@ -2,8 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution {
+  private static final ArrayList<String> formmatedList = new ArrayList<>();
+
   public static void main(String[] args) {
-    ArrayList<String> formmatedList = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
 
@@ -21,8 +22,6 @@ public class Solution {
 
     System.out.println(formmatedList.size());
 
-    for (String word : formmatedList) {
-      System.out.println(word);
-    }
+    formmatedList.forEach(System.out::println);
   }
 }
