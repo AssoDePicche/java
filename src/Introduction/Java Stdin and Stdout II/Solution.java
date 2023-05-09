@@ -4,9 +4,9 @@ public class Solution {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    Integer myInteger = scanner.nextInt();
+    int myInteger = scanner.nextInt();
 
-    Double myDouble = scanner.nextDouble();
+    double myDouble = scanner.nextDouble();
 
     scanner.nextLine();
 
