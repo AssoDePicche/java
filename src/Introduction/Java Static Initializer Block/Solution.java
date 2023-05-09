@@ -1,23 +1,29 @@
 import java.util.Scanner;
 
 public class Solution {
-  public static int breadth = 0;
-
-  public static int height = 0;
+  public static int breadth, height;
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    Solution.breadth = scanner.nextInt();
+    breadth = Integer.valueOf(scanner.nextLine());
 
-    Solution.height = scanner.nextInt();
+    height = Integer.valueOf(scanner.nextLine());
 
     scanner.close();
 
-    if (Solution.breadth <= 0 || Solution.height <= 0) {
-      System.out.println("java.lang.Exception: Breadth and height must be positive");
-    } else {
-      System.out.println(Solution.breadth * Solution.height);
-    }
+    System.out.println(areTheDimensionsValid() ? getArea() : getException());
+  }
+
+  public static boolean areTheDimensionsValid() {
+    return (breadth > 0) && (height > 0);
+  }
+
+  public static int getArea() {
+    return breadth * height;
+  }
+
+  public static String getException() {
+    return "java.lang.Exception: Breadth and height must be positive";
   }
 }
