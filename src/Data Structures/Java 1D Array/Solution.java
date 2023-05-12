@@ -1,21 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Solution {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    int n = scanner.nextInt();
+    int entries = scanner.nextInt();
 
-    int a[] = new int[n];
+    List<Integer> list = new ArrayList<>();
 
-    for (int i = 0; i < n; i++) {
-      a[i] = scanner.nextInt();
+    while (entries-- != 0) {
+      list.add(scanner.nextInt());
     }
 
     scanner.close();
 
-    for (int value : a) {
-      System.out.println(value);
-    }
+    list.forEach(System.out::println);
   }
 }
