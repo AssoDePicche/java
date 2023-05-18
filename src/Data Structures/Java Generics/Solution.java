@@ -1,17 +1,18 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Solution {
   public static void main(String[] args) {
-    Integer[] intArray = { 1, 2, 3 };
+    List<Integer> integers = Arrays.asList(1, 2, 3);
 
-    String[] strArray = { "Hello", "World" };
+    List<String> strings = Arrays.asList("Hello", "World");
 
-    Solution.printArray(intArray);
+    printArray(integers);
 
-    Solution.printArray(strArray);
+    printArray(strings);
   }
 
-  public static <Type> void printArray(Type[] array) {
-    for (Type x : array) {
-      System.out.println(x);
-    }
+  public static <T> void printArray(List<T> array) {
+    array.forEach(System.out::println);
   }
 }
