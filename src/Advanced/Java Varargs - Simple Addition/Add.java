@@ -2,15 +2,17 @@ public class Add {
   public void add(int... args) {
     int sum = 0;
 
-    String output = "";
+    StringBuilder builder = new StringBuilder("");
 
     for (int arg : args) {
       sum += arg;
 
-      output += String.valueOf(arg) + "+";
+      builder.append(arg);
+
+      builder.append("+");
     }
 
-    output = output.substring(0, output.length() - 1);
+    String output = builder.substring(0, builder.length() - 1);
 
     System.out.println(output + "=" + sum);
   }
