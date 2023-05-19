@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Solution {
@@ -18,38 +19,30 @@ public class Solution {
 
     scanner.close();
 
-    Solution.check(n1);
+    check(n1);
 
-    Solution.check(n1, n2);
+    check(n1, n2);
 
-    Solution.check(n1, n2, n3);
+    check(n1, n2, n3);
 
-    Solution.check(n1, n2, n3, n4, n5);
+    check(n1, n2, n3, n4, n5);
   }
 
-  public static void check(int... args) {
-    String output = "";
+  private static void check(int... args) {
+    StringBuilder builder = new StringBuilder("");
 
     for (int arg : args) {
       if (isPrime(arg)) {
-        output += String.valueOf(arg) + " ";
+        builder.append(arg);
+
+        builder.append(" ");
       }
     }
 
-    System.out.println(output);
+    System.out.println(builder);
   }
 
-  public static boolean isPrime(int arg) {
-    if (arg < 2) {
-      return false;
-    }
-
-    for (int i = 2; i * i <= arg; i++) {
-      if (arg % i == 0) {
-        return false;
-      }
-    }
-
-    return true;
+  private static boolean isPrime(int number) {
+    return BigInteger.valueOf(number).isProbablePrime(1);
   }
 }
