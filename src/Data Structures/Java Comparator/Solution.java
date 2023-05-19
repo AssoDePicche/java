@@ -1,26 +1,28 @@
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Solution {
   public static void main(String[] args) {
-    Checker checker = new Checker();
-
     Scanner scanner = new Scanner(System.in);
 
-    int n = scanner.nextInt();
+    int numberOfPlayers = scanner.nextInt();
 
-    Player[] players = new Player[n];
+    List<Player> players = new ArrayList<>();
 
-    while (n-- != 0) {
-      players[n] = new Player(scanner.next(), scanner.nextInt());
+    while (numberOfPlayers-- != 0) {
+      String name = scanner.next();
+
+      int score = scanner.nextInt();
+
+      players.add(new Player(name, score));
     }
 
     scanner.close();
 
-    Arrays.sort(players, checker);
+    Collections.sort(players, new Checker());
 
-    for (Player player : players) {
-      System.out.printf("%s %d\n", player.getName(), player.getScore());
-    }
+    players.forEach(System.out::println);
   }
 }
