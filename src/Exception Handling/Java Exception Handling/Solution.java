@@ -2,22 +2,22 @@ import java.lang.Exception;
 import java.util.Scanner;
 
 public class Solution {
-  public static final MyCalculator calculator = new MyCalculator();
-
-  public static final Scanner scanner = new Scanner(System.in);
-
   public static void main(String[] args) {
-    int n, p;
+    Scanner scanner = new Scanner(System.in);
 
     while (scanner.hasNextInt()) {
-      n = scanner.nextInt();
-
-      p = scanner.nextInt();
-
       try {
-        System.out.println(calculator.power(n, p));
+        int base, exponent;
+
+        base = scanner.nextInt();
+
+        exponent = scanner.nextInt();
+
+        System.out.println(MyCalculator.power(base, exponent));
       } catch (Exception exception) {
         System.out.println(exception);
+      } finally {
+        scanner.close();
       }
     }
 
