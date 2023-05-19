@@ -13,7 +13,7 @@ public class Solution {
       y = scanner.nextInt();
 
       System.out.println(x / y);
-    } catch (InputMismatchException e) {
+    } catch (InputMismatchException exception) {
       System.out.println("java.util.InputMismatchException");
     } catch (Exception exception) {
       System.out.println(exception);
